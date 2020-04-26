@@ -1,0 +1,29 @@
+---
+driver:
+  name: ec2
+  require_chef_omnibus: true
+  instance_type: t2.micro
+  region: eu-west-1
+  subnet_id: subnet-0e9b6138ff1ce18f2
+  associate_public_ip: true
+
+provisioner:
+  name: chef_zero
+  always_update_cookbooks: true
+
+verifier:
+  name: inspec
+
+platforms:
+  - name: ubuntu-16.04
+    driver:
+      box: ubuntu/xenial64
+
+suites:
+  - name: default
+    run_list:
+      - recipe[mongo::default]
+    verifier:
+      inspec_tests:
+        - test/integration/default
+    attributes:

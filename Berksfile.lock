@@ -1,0 +1,25 @@
+DEPENDENCIES
+  mongo
+    git: git@github.com:adurm/mongocookbook.git
+    revision: 8c1ece805342d57a14eafaf86450c9aac2aba789
+  node
+    git: git@github.com:adurm/nodecookbook.git
+    revision: e27794f4457a5f6db95a8bb29db153369a2546e3
+
+GRAPH
+  ark (5.0.0)
+    seven_zip (>= 0.0.0)
+  build-essential (8.2.1)
+    mingw (>= 1.1)
+    seven_zip (>= 0.0.0)
+  mingw (2.1.0)
+    seven_zip (>= 0.0.0)
+  mongo (0.1.0)
+  node (0.1.0)
+    nodejs (~> 5.0.0)
+  nodejs (5.0.0)
+    ark (>= 2.0.2)
+    build-essential (>= 0.0.0)
+  seven_zip (3.1.2)
+    windows (>= 0.0.0)
+  windows (7.0.0)
